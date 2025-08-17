@@ -44,3 +44,41 @@ Details: ${data.notes||''}`;
     window.open(url, '_blank');
   });
 }
+// Lightbox
+(function(){
+  const lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.innerHTML = `
+    <div class="lb-inner">
+      <button class="lb-close" aria-label="Close">×</button>
+      <img class="lb-img" alt="">
+      <div class="lb-cap"></div>
+    </div>`;
+  document.body.appendChild(lb);
+
+  const imgEl = lb.querySelector('.lb-img');
+  const capEl = lb.querySelector('.lb-cap');
+  const closeBtn = lb.querySelector('.lb-close');
+
+  function openLB(src, cap) {
+    imgEl.src = src;
+    imgEl.alt = cap || '';
+    capEl.textContent = cap || '';
+    lb.classList.add('open');
+  }
+  function closeLB() {
+    lb.classList.remove('open');
+    imgEl.src = '';
+  }
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a.glink');
+    if (!a) return;
+    e.preventDefault();
+    openLB(a.getAttribute('href'), a.dataset.caption || a.title || '');
+  });
+  closeBtn.addEventListener('click', closeLB);
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLB(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLB(); });
+})();
+
