@@ -105,9 +105,36 @@ body{
 .ticks li::before{content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:800}
 
 /* Gallery */
-.gallery{display:grid; gap:.7rem}
-.g-item{aspect-ratio:16/10; background:linear-gradient(135deg, #e5e7eb, #f1f5f9); border:1px solid #e5e7eb; border-radius:12px}
-@media(min-width:900px){ .gallery{grid-template-columns:repeat(3, 1fr)} }
+/* Robust, responsive gallery */
+.gallery{
+  display:grid;
+  gap:12px;
+  /* auto-fit makes as many columns as will fit the container */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items:stretch;
+}
+
+/* Each item is a consistent 16:10 frame */
+.g-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  aspect-ratio:16 / 10;
+}
+
+/* Make the link and image fill the frame */
+.g-item > a{display:block; width:100%; height:100%}
+.g-item img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* Caption badge */
+.g-item figcaption{
+  position:absolute; top:8px; left:8px;
+  padding:.25rem .5rem; font-weight:700; font-size:.9rem;
+  color:#fff; background:rgba(0,0,0,.6); border-radius:8px;
+}
+
 
 /* Contact */
 .contact-grid{display:grid; gap:1.2rem}
@@ -199,6 +226,7 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
   background: url("assets/hero/hero-clean-living-room.webp") center/cover no-repeat,
               linear-gradient(135deg,#e0f2fe,#dbeafe);
 }
+
 
 
 
