@@ -1,0 +1,11 @@
+{
+  "name": "Delly's Cleaning Services",
+  "short_name": "Delly's Cleaning",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1343C3",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
