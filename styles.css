@@ -267,7 +267,7 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
   display:grid;
   gap:10px;
   /* auto-fit makes as many tiles as will fit */
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   max-width: 880px;      /* keep gallery from spanning the whole page */
   margin-inline:auto;    /* center it */
 }
@@ -294,6 +294,7 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 
 /* Tighter section padding so it feels compact */
 #gallery.section{ padding: 2rem 0; }
+
 
 
 
