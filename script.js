@@ -81,4 +81,17 @@ Details: ${data.notes||''}`;
   lb.addEventListener('click', (e) => { if (e.target === lb) closeLB(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLB(); });
 })();
+// Auto BEFORE/AFTER badges from filenames
+document.querySelectorAll('.g-item').forEach(fig => {
+  const img = fig.querySelector('img');
+  if (!img) return;
+  const src = (img.getAttribute('src') || '').toLowerCase();
+  const badge = document.createElement('div');
+  badge.className = 'g-badge';
+  if (src.includes('-before')) { badge.textContent = 'BEFORE'; badge.classList.add('before'); }
+  else if (src.includes('-after')) { badge.textContent = 'AFTER'; badge.classList.add('after'); }
+  else return;
+  fig.appendChild(badge);
+});
+
 
