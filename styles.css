@@ -437,6 +437,23 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 .small{ font-size:.92rem }
 .foot-bottom{ border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem }
 
+/* Sticky WhatsApp bar (mobile) */
+@media (max-width: 820px){
+  .wa-sticky{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:.6rem; background:linear-gradient(135deg, var(--primary), var(--primary-2));
+    box-shadow:0 -8px 26px rgba(2,6,23,.18);
+  }
+  .wa-sticky a{
+    display:block; text-align:center; background:#fff; color:#111827;
+    font-weight:800; padding:.85rem 1rem; border-radius:10px; text-decoration:none;
+  }
+  /* avoid overlap with the bar */
+  body{ padding-bottom:72px; }
+  /* hide floating bubble on small screens */
+  .fab{ display:none; }
+}
+
 
 
 
