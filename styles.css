@@ -467,6 +467,19 @@ section[id]{ scroll-margin-top: 90px; }
 .menu a{ pointer-events:auto; cursor:pointer; }
 section[id]{ scroll-margin-top:90px; }  /* avoids header covering titles */
 
+/* Make sure nothing blocks header clicks */
+.site-header{ position:sticky; top:0; z-index:9999; background:#ffffffee; }
+.nav{ position:relative; z-index:2; }
+.menu{ position:relative; z-index:2; }
+.menu a{ pointer-events:auto; cursor:pointer; display:inline-block; }
+
+/* If any banner/overlay sits near the top, don't let it steal clicks */
+.cta-wa, .hero, .topbar{ position:relative; z-index:1; }
+
+/* Smooth scroll + offset so titles aren't hidden under sticky header */
+html{ scroll-behavior:smooth; }
+section[id]{ scroll-margin-top: 90px; }
+
 
 
 
