@@ -479,6 +479,12 @@ section[id]{ scroll-margin-top:90px; }  /* avoids header covering titles */
 /* Smooth scroll + offset so titles aren't hidden under sticky header */
 html{ scroll-behavior:smooth; }
 section[id]{ scroll-margin-top: 90px; }
+.site-header{ position:sticky; top:0; z-index:9999; }
+.menu{ position:relative; z-index:2; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+html{ scroll-behavior:smooth; }
+section[id]{ scroll-margin-top: 90px; } /* offset for sticky header */
+
 
 
 
