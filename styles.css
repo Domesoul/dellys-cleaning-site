@@ -317,6 +317,53 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 .g-item.split.right{
   background-position: right center; /* show AFTER (right) */
 }
+/* ===== Footer ===== */
+.site-footer{
+  background:#0f172a;           /* deep navy */
+  color:#cbd5e1;
+  margin-top:2rem;
+  border-top:1px solid #0b1229;
+}
+.site-footer a{ color:#e5e7eb; text-decoration:none }
+.site-footer a:hover{ color:#fff; text-decoration:underline }
+
+/* layout */
+.foot-grid{
+  display:grid; gap:22px; padding:28px 0;
+  align-items:start;
+}
+@media (min-width:900px){
+  .foot-grid{ grid-template-columns: 1.2fr 1fr 1fr; }
+}
+
+/* brand */
+.foot-brand .brand{
+  display:flex; align-items:center; gap:.6rem;
+  color:#e5e7eb; text-decoration:none; font-weight:800
+}
+.foot-brand .brand-icon{ color:#3b82f6 }
+.foot-tag{ margin:.25rem 0 .4rem; color:#93c5fd }
+
+/* link column */
+.foot-links h4, .foot-cta h4{ margin:0 0 .5rem; color:#e2e8f0; font-size:1rem }
+.foot-links ul, .foot-cta ul{ list-style:none; margin:0; padding:0 }
+.foot-links li, .foot-cta li{ margin:.3rem 0 }
+
+/* buttons inside dark footer */
+.foot-buttons{ margin-top:.7rem; display:flex; gap:.5rem; flex-wrap:wrap }
+.site-footer .btn-outline{
+  background:transparent; color:#e2e8f0; border-color:#94a3b8;
+}
+.site-footer .btn-primary{
+  background:linear-gradient(135deg,#22c55e,#10b981); /* green pops on dark */
+  border:none;
+}
+
+/* bottom bar */
+.foot-bottom{
+  border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem;
+}
+
 
 
 
