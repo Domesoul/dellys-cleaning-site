@@ -397,6 +397,46 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 /* bottom bar */
 .foot-bottom{ border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem }
 
+/* CTA banner (full width) */
+.cta-wa{
+  background:linear-gradient(135deg, var(--primary), var(--primary-2));
+  color:#fff; padding:1.6rem 0; margin-top:1rem;
+  border-top:1px solid rgba(255,255,255,.25);
+  position:relative; z-index:1;  /* sit above any shadows */
+}
+.cta-wa .container{
+  display:grid; gap:.6rem; align-items:center; text-align:center;
+}
+@media(min-width:900px){
+  .cta-wa .container{ grid-template-columns:1.2fr 1fr auto; text-align:left }
+}
+.btn-cta{ background:#fff; color:#0b1020; border:none; font-weight:800;
+          padding:.9rem 1.1rem; border-radius:12px;
+          box-shadow:0 10px 18px rgba(0,0,0,.15); text-decoration:none }
+
+/* Footer (2 columns) */
+.site-footer{ background:#0f172a; color:#cbd5e1; margin-top:2rem; border-top:1px solid #0b1229 }
+.site-footer a{ color:#e5e7eb; text-decoration:none }
+.site-footer a:hover{ color:#fff; text-decoration:underline }
+.foot-grid.two{ display:grid; gap:22px; padding:28px 0 }
+@media (min-width:900px){ .foot-grid.two{ grid-template-columns:1.2fr 1fr } }
+.foot-left .brand{ display:inline-flex; align-items:center; gap:.6rem; color:#e5e7eb; font-weight:800; text-decoration:none }
+.foot-left .brand-icon{ color:#3b82f6 }
+.foot-tag{ margin:.3rem 0 .6rem; color:#93c5fd }
+.foot-contact{ list-style:none; margin:0 0 .6rem; padding:0 }
+.foot-contact li{ margin:.25rem 0 }
+.socials{ display:flex; gap:.5rem; flex-wrap:wrap }
+.s-btn{ width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+        border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18) }
+.icon{ width:18px; height:18px; fill:#e5e7eb }
+.foot-right h4{ margin:.2rem 0 .5rem; color:#e2e8f0; font-size:1rem }
+.foot-links{ list-style:none; margin:0 0 .7rem; padding:0; display:grid; gap:.25rem }
+.foot-buttons{ display:flex; gap:.5rem; flex-wrap:wrap }
+.site-footer .btn-outline{ background:transparent; color:#e2e8f0; border-color:#94a3b8 }
+.site-footer .btn-primary{ background:linear-gradient(135deg,#22c55e,#10b981); border:none }
+.small{ font-size:.92rem }
+.foot-bottom{ border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem }
+
 
 
 
