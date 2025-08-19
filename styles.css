@@ -522,4 +522,15 @@ section[id]{ scroll-margin-top:90px; }
 @media (min-width:900px){ .foot-grid.two{ grid-template-columns:1.2fr 1fr } }
 .site-header{ position:sticky; top:0; z-index:9999; }
 section[id]{ scroll-margin-top:90px; }
+/* --- Overlay killer & stacking sanity --- */
+.site-header{ position:sticky; top:0; z-index:10000; background:#ffffffee; }
+.nav, .menu{ position:relative; z-index:2; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+
+section, footer, .cta-wa{ position:relative; z-index:auto; isolation:isolate; }
+.contact-grid, .contact-card, .form{ position:static !important; }
+
+.lb, .wa-sticky, .fab{ z-index:60; } /* UI widgets only */
+section[id]{ scroll-margin-top:90px; } /* anchors not hidden */
+
 
