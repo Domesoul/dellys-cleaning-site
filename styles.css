@@ -517,3 +517,9 @@ section[id]{ scroll-margin-top: 90px; } /* offset for sticky header */
 /* Ensure header is clickable and anchors scroll nicely */
 .site-header{ position:sticky; top:0; z-index:9999; }
 section[id]{ scroll-margin-top:90px; }
+.site-footer{ background:#0f172a; color:#cbd5e1; margin-top:2rem; border-top:1px solid #0b1229 }
+.foot-grid.two{ display:grid; gap:22px; padding:28px 0 }
+@media (min-width:900px){ .foot-grid.two{ grid-template-columns:1.2fr 1fr } }
+.site-header{ position:sticky; top:0; z-index:9999; }
+section[id]{ scroll-margin-top:90px; }
+
