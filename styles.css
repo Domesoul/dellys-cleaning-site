@@ -363,6 +363,40 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 .foot-bottom{
   border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem;
 }
+/* ===== Slim Footer (2 columns) ===== */
+.site-footer{ background:#0f172a; color:#cbd5e1; margin-top:2rem; border-top:1px solid #0b1229 }
+.site-footer a{ color:#e5e7eb; text-decoration:none }
+.site-footer a:hover{ color:#fff; text-decoration:underline }
+.foot-grid.two{ display:grid; gap:22px; padding:28px 0; text-align:center }
+.foot-left .brand{ display:inline-flex; align-items:center; gap:.6rem; color:#e5e7eb; font-weight:800; text-decoration:none }
+.foot-left .brand-icon{ color:#3b82f6 }
+.foot-tag{ margin:.3rem 0 .6rem; color:#93c5fd }
+.foot-contact{ list-style:none; margin:0 0 .6rem; padding:0 }
+.foot-contact li{ margin:.25rem 0 }
+
+/* socials */
+.socials{ display:flex; gap:.5rem; justify-content:center; margin-top:.25rem }
+.s-btn{ width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+        border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18) }
+.icon{ width:18px; height:18px; fill:#e5e7eb }
+
+/* right column */
+.foot-right h4{ margin:.2rem 0 .5rem; color:#e2e8f0; font-size:1rem }
+.foot-links{ list-style:none; margin:0 0 .7rem; padding:0; display:grid; gap:.25rem }
+.foot-buttons{ display:flex; justify-content:center; gap:.5rem; flex-wrap:wrap }
+.site-footer .btn-outline{ background:transparent; color:#e2e8f0; border-color:#94a3b8 }
+.site-footer .btn-primary{ background:linear-gradient(135deg,#22c55e,#10b981); border:none }
+.small{ font-size:.92rem }
+
+@media (min-width:900px){
+  .foot-grid.two{ grid-template-columns: 1.2fr 1fr; text-align:left }
+  .foot-right{ justify-self:end; text-align:left }
+  .foot-buttons{ justify-content:flex-start }
+}
+
+/* bottom bar */
+.foot-bottom{ border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem }
+
 
 
 
