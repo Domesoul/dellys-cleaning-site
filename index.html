@@ -45,33 +45,37 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="Delly's Cleaning Services home">
-        <span class="brand-icon" aria-hidden="true">
-          <!-- Simple broom-in-bucket SVG icon -->
-          <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path d="M46 27l-9-22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M24 26l22-9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <rect x="14" y="28" width="28" height="26" rx="6" stroke="currentColor" stroke-width="4" fill="none"/>
-            <path d="M14 44h28" stroke="currentColor" stroke-width="4"/>
-          </svg>
-        </span>
-        <span class="brand-text">Delly's <em>Cleaning</em></span>
-      </a>
+ <!-- TOP BAR (leave as you have it) -->
 
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<!-- HEADER / NAV -->
+<header class="site-header">
+  <div class="container nav">
+    <!-- Brand (make sure this link CLOSES before the nav) -->
+    <a class="brand" href="#home" aria-label="Delly's Cleaning Services">
+      <span class="brand-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+          <path d="M46 27l-9-22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M24 26l22-9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <rect x="14" y="28" width="28" height="26" rx="6" stroke="currentColor" stroke-width="4" fill="none"/>
+          <path d="M14 44h28" stroke="currentColor" stroke-width="4"/>
+        </svg>
+      </span>
+      <span class="brand-text">Delly's <em>Cleaning</em></span>
+    </a> <!-- ✅ IMPORTANT: this closing tag must be here -->
 
-    <nav class="menu" id="siteMenu">
-  <a href="#services">Services</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#faq">FAQs</a>
-  <a href="#contact" class="btn btn-primary">Book Now</a>
-</nav>
-  </header>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="menu" id="siteMenu" role="navigation" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact" class="btn btn-primary">Book Now</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero" id="home">
@@ -467,6 +471,7 @@
 
 </body>
 </html>
+
 
 
 
