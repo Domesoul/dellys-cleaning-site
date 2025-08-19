@@ -463,6 +463,10 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 /* Smooth scroll & offset for sticky header */
 html{ scroll-behavior:smooth; }
 section[id]{ scroll-margin-top: 90px; }
+.site-header{ z-index:1000; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+section[id]{ scroll-margin-top:90px; }  /* avoids header covering titles */
+
 
 
 
