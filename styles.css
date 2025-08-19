@@ -453,6 +453,17 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
   /* hide floating bubble on small screens */
   .fab{ display:none; }
 }
+/* Make sure header sits above any banners */
+.site-header{ z-index: 1000; }
+
+/* Ensure menu links are clickable and not covered */
+.menu{ position: relative; }
+.menu a{ pointer-events: auto; cursor: pointer; }
+
+/* Smooth scroll & offset for sticky header */
+html{ scroll-behavior:smooth; }
+section[id]{ scroll-margin-top: 90px; }
+
 
 
 
