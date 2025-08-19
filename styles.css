@@ -307,6 +307,17 @@ input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring); border
 /* Tighter section padding so it feels compact */
 #gallery.section{ padding: 2rem 0; }
 
+/* Turn one split image into two tiles */
+.g-item.split{
+  background-image: var(--img);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;   /* two halves across the width */
+  background-position: left center; /* show BEFORE (left) */
+}
+.g-item.split.right{
+  background-position: right center; /* show AFTER (right) */
+}
+
 
 
 
