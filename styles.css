@@ -533,4 +533,10 @@ section, footer, .cta-wa{ position:relative; z-index:auto; isolation:isolate; }
 .lb, .wa-sticky, .fab{ z-index:60; } /* UI widgets only */
 section[id]{ scroll-margin-top:90px; } /* anchors not hidden */
 
+/* Keep sections from overlapping; header always on top */
+.section, footer { position: relative; isolation: isolate; }
+.site-header{ position: sticky; top:0; z-index:10000; background:#ffffffee; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+section[id]{ scroll-margin-top:90px; } /* anchor offset */
+
 
