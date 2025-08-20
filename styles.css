@@ -539,4 +539,61 @@ section[id]{ scroll-margin-top:90px; } /* anchors not hidden */
 .menu a{ pointer-events:auto; cursor:pointer; }
 section[id]{ scroll-margin-top:90px; } /* anchor offset */
 
+/* --- Overhaul safety patch --- */
+:root{
+  --primary:#1343C3; --primary-2:#3B82F6;
+}
+
+.site-header{ position:sticky; top:0; z-index:10000; background:#ffffffee; backdrop-filter:saturate(1.2) blur(4px); }
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+
+/* Section & anchor safety */
+.section, footer, .cta-wa{ position:relative; isolation:isolate; }
+section[id]{ scroll-margin-top: 90px; }
+
+/* Hero layout */
+.hero-grid{ display:grid; gap:1rem; align-items:center; }
+@media(min-width:900px){ .hero-grid{ grid-template-columns:1.1fr 1fr } }
+.hero-art{ min-height:260px; border-radius:18px; border:1px solid #bfdbfe;
+  background: url("assets/hero/hero-clean-living-room.webp") center/cover no-repeat, linear-gradient(135deg,#e0f2fe,#dbeafe); }
+
+/* Compact tile gallery */
+.gallery{ display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); max-width:880px; margin-inline:auto; }
+.g-item{ position:relative; overflow:hidden; aspect-ratio:1/1; border-radius:12px; border:1px solid #e5e7eb; background:#fff; }
+.g-item > a{ display:block; width:100%; height:100% }
+.g-item img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s ease }
+.g-item:hover img{ transform:scale(1.04) }
+.g-item figcaption{ position:absolute; top:8px; left:8px; padding:.22rem .5rem; font-weight:700; font-size:.85rem;
+  color:#fff; background:rgba(0,0,0,.55); border-radius:8px; }
+
+/* Testimonials grid */
+.t-grid{ display:grid; gap:1rem }
+@media(min-width:900px){ .t-grid{ grid-template-columns:repeat(3,1fr) } }
+.t-card{ background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:1rem; box-shadow:0 10px 20px rgba(2,6,23,.03) }
+.stars{ letter-spacing:.15rem; font-weight:800; background:linear-gradient(90deg,#f59e0b,#facc15); -webkit-background-clip:text; background-clip:text; color:transparent }
+
+/* CTA banner */
+.cta-wa{ background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:#fff; padding:1.6rem 0; margin-top:1rem; border-top:1px solid rgba(255,255,255,.25) }
+.cta-wa-grid{ display:grid; gap:.6rem; align-items:center; text-align:center }
+@media(min-width:900px){ .cta-wa-grid{ grid-template-columns:1.2fr 1fr auto; text-align:left } }
+.btn-cta{ background:#fff; color:#0b1020; border:none; font-weight:800; padding:.9rem 1.1rem; border-radius:12px; text-decoration:none; box-shadow:0 10px 18px rgba(0,0,0,.15) }
+
+/* Footer */
+.site-footer{ background:#0f172a; color:#cbd5e1; margin-top:2rem; border-top:1px solid #0b1229 }
+.site-footer a{ color:#e5e7eb; text-decoration:none }
+.site-footer a:hover{ color:#fff; text-decoration:underline }
+.foot-grid.two{ display:grid; gap:22px; padding:28px 0 }
+@media(min-width:900px){ .foot-grid.two{ grid-template-columns:1.2fr 1fr } }
+.foot-bottom{ border-top:1px solid #1f2937; padding:10px 0; color:#94a3b8; font-size:.92rem }
+
+/* Sticky WhatsApp (mobile) */
+@media (max-width: 820px){
+  .wa-sticky{ position:fixed; left:0; right:0; bottom:0; z-index:60; padding:.6rem;
+    background:linear-gradient(135deg,var(--primary),var(--primary-2)); box-shadow:0 -8px 26px rgba(2,6,23,.18) }
+  .wa-sticky a{ display:block; text-align:center; background:#fff; color:#111827; font-weight:800; padding:.85rem 1rem; border-radius:10px; text-decoration:none }
+  body{ padding-bottom:72px }
+  .fab{ display:none }
+}
+
 
