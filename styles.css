@@ -595,5 +595,15 @@ section[id]{ scroll-margin-top: 90px; }
   body{ padding-bottom:72px }
   .fab{ display:none }
 }
+/* Header above everything; links always clickable */
+.site-header{ position:sticky; top:0; z-index:10000; background:#ffffffee; }
+.menu a{ pointer-events:auto; cursor:pointer; }
+
+/* Sections & footer never overlay each other */
+.section, footer{ position:relative; isolation:isolate; }
+
+/* Anchor offset for sticky header */
+section[id]{ scroll-margin-top:90px; }
+
 
 
