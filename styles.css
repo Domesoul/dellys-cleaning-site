@@ -604,6 +604,33 @@ section[id]{ scroll-margin-top: 90px; }
 
 /* Anchor offset for sticky header */
 section[id]{ scroll-margin-top:90px; }
+/* Sticky WhatsApp bar — hidden by default (desktop) */
+.wa-sticky{
+  display:none;         /* <— this removes the stray desktop link */
+  visibility:hidden;
+  height:0;
+  overflow:hidden;
+}
+
+/* Mobile presentation */
+@media (max-width: 820px){
+  .wa-sticky{
+    display:block;
+    visibility:visible;
+    height:auto;
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:.6rem;
+    background:linear-gradient(135deg, var(--primary), var(--primary-2));
+    box-shadow:0 -8px 26px rgba(2,6,23,.18);
+  }
+  .wa-sticky a{
+    display:block; text-align:center; background:#fff; color:#111827;
+    font-weight:800; padding:.85rem 1rem; border-radius:10px; text-decoration:none;
+  }
+  body{ padding-bottom:72px; }   /* avoid overlap with the bar */
+  .fab{ display:none; }          /* hide the floating bubble on small screens */
+}
+
 
 
 
