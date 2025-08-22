@@ -130,6 +130,8 @@ if (form) {
     window.open(url, '_blank', 'noopener');
   });
 }
+document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
 
 
 
