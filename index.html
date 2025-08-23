@@ -360,9 +360,34 @@
     <a href="https://wa.me/2349045762007?text=Hello%20Delly's%20Cleaning%2C%20I'd%20like%20to%20book%20a%20cleaning."
        target="_blank" rel="noopener">Book on WhatsApp</a>
   </div>
+<!-- Add before </body> -->
+<style>
+  .lb-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:9999}
+  .lb-backdrop.open{display:flex}
+  .lb-frame{max-width:min(92vw,1100px);max-height:90vh}
+  .lb-caption{color:#fff;margin-top:.5rem;text-align:center;font-weight:700}
+</style>
+<div class="lb-backdrop" id="lightbox" aria-modal="true" role="dialog">
+  <div>
+    <img class="lb-frame" id="lbImg" alt="">
+    <div class="lb-caption" id="lbCap"></div>
+  </div>
+</div>
+<script>
+  const lb=document.getElementById('lightbox'), img=document.getElementById('lbImg'), cap=document.getElementById('lbCap');
+  document.querySelectorAll('#gallery .g-item').forEach(fig=>{
+    fig.addEventListener('click', ()=>{
+      const i=fig.querySelector('img'); img.src=i.src; img.alt=i.alt; cap.textContent=fig.querySelector('figcaption')?.textContent||'';
+      lb.classList.add('open');
+    });
+  });
+  lb.addEventListener('click', e=>{ if(e.target===lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') lb.classList.remove('open'); });
+</script>
 
 </body>
 </html>
+
 
 
 
