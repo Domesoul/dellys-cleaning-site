@@ -1,355 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Delly's Cleaning Services — Best & Excellent Cleaning in Rivers State</title>
-  <meta name="description" content="Delly's Cleaning Services offers professional home, office, hotel and specialized cleaning in Port Harcourt & Rivers State. One-time, weekly, bi-weekly, or monthly." />
-  <meta property="og:title" content="Delly's Cleaning Services" />
-  <meta property="og:description" content="Professional home, office, hotel & specialized cleaning. Book a sparkling clean today." />
+  <title>Delly’s Cleaning Services – Home • Office • Hotel (Port Harcourt)</title>
+  <meta name="description" content="Professional home, office and hotel cleaning in Port Harcourt & Rivers State. Trained, vetted team. Free WhatsApp quote." />
+
+  <!-- Open Graph / Share -->
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#1343C3" />
-  <!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:title" content="Delly’s Cleaning Services – Port Harcourt" />
+  <meta property="og:description" content="Spotless results for homes, offices and hotels. Get a free quote on WhatsApp." />
+  <meta property="og:url" content="https://domesoul.github.io/dellys-cleaning-site/" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/icon-180.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<meta name="theme-color" content="#1343C3">
 
-<!-- Open Graph / Twitter -->
-<meta property="og:title" content="Delly's Cleaning Services">
-<meta property="og:description" content="Professional home, office, hotel & specialized cleaning. Book a sparkling clean today.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://domesoul.github.io/dellys-cleaning-site/">
-<meta property="og:image" content="https://domesoul.github.io/dellys-cleaning-site/assets/og-cover.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Delly's Cleaning Services">
-<meta name="twitter:description" content="Professional home, office, hotel & specialized cleaning.">
-<meta name="twitter:image" content="https://domesoul.github.io/dellys-cleaning-site/assets/og-cover.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style> body{ font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; } </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="preload" as="image" href="assets/hero/hero-clean-room.webp">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=1.0" />
 
-  <style id="hotfix">
-  /* --- header / links --- */
-  .site-header{position:sticky;top:0;z-index:10000;background:#ffffffee!important;border-bottom:1px solid #e7ecf2}
-  .menu a{pointer-events:auto;cursor:pointer}
-
-  /* anchor offset for sticky header */
-  section[id]{scroll-margin-top:90px}
-
-  /* --- gallery tidy (tiles) --- */
-  #gallery .gallery{display:grid!important;gap:12px!important;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))!important;max-width:900px;margin:18px auto 0}
-  #gallery .g-item{position:relative;aspect-ratio:1/1;border:1px solid #e7ecf2;border-radius:14px;overflow:hidden;background:#fff}
-  #gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block}
-  #gallery .g-item figcaption{position:absolute;left:10px;bottom:10px;padding:.28rem .6rem;background:rgba(0,0,0,.55);color:#fff;border-radius:10px;font-weight:700;font-size:.86rem}
-
-  /* --- CTA banner spacing above footer --- */
-  .cta-wa{margin-top:12px}
-
-  /* --- footer polish --- */
-  .site-footer{background:#0f172a!important;color:#cbd5e1!important;margin-top:14px;border-top:1px solid #0b1229}
-  .site-footer a{color:#e5e7eb;text-decoration:none}
-  .site-footer a:hover{color:#fff;text-decoration:underline}
-  .foot-grid.two{display:grid;gap:22px;padding:28px 0}
-  @media(min-width:900px){.foot-grid.two{grid-template-columns:1.2fr 1fr}}
-  .foot-bottom{border-top:1px solid #1f2937;padding:10px 0;color:#94a3b8;font-size:.92rem}
-
-  /* --- sticky WhatsApp: hide on desktop, show on mobile --- */
-  .wa-sticky{display:none!important;visibility:hidden;height:0;overflow:hidden}
-  @media(max-width:820px){
-    .wa-sticky{display:block!important;visibility:visible;height:auto;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.6rem;background:linear-gradient(135deg,#1343C3,#3B82F6);box-shadow:0 -10px 26px rgba(2,6,23,.18)}
-    .wa-sticky a{display:block;text-align:center;background:#fff;color:#111827;font-weight:800;padding:.9rem 1rem;border-radius:10px;text-decoration:none}
-    body{padding-bottom:72px}
-    .fab{display:none}
-  }
-</style>
-
-  
+  <!-- Google Analytics (replace G-XXXXXXXXXX with your GA4 ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
 
-  <!-- TOP BAR (optional) -->
+  <!-- Top strip -->
   <div class="topbar">
     <div class="container">
-      <small>Rivers State • Professional Home, Office & Hotel Cleaning</small>
+      <small>📍 Abuloma, Port Harcourt — Rivers State • 📞 <a href="tel:+2349045762007">0904 576 2007</a> / <a href="tel:+2349033006149">0903 300 6149</a></small>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header class="site-header" id="home">
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="Delly's Cleaning Services">
+      <a class="brand" href="#home" aria-label="Delly's Cleaning">
         <span class="brand-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+          <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
             <path d="M46 27l-9-22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
             <path d="M24 26l22-9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
             <rect x="14" y="28" width="28" height="26" rx="6" stroke="currentColor" stroke-width="4" fill="none"/>
             <path d="M14 44h28" stroke="currentColor" stroke-width="4"/>
           </svg>
         </span>
-        <span class="brand-text">Delly's <em>Cleaning</em></span>
+        <span class="brand-text">Delly’s <em>Cleaning</em></span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-      <nav class="menu" id="siteMenu" role="navigation" aria-label="Primary">
-  <a href="#services">Services</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>  <!-- fixed -->
-  <a href="#faq">FAQs</a>
-  <a href="#contact" class="btn btn-primary">Book Now</a>
-</nav>
+      <nav class="menu" id="siteMenu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact" class="btn btn-primary">Book Now</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero section">
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Spotless results, every time</h1>
-        <p>Professional cleaning for homes, offices & hotels across Rivers State.</p>
+        <p>Professional cleaning for homes, offices & hotels across Rivers State. Trained, vetted team.</p>
         <div class="hero-actions">
           <a href="#pricing" class="btn btn-primary">See Pricing</a>
           <a href="#contact" class="btn btn-outline">Get Free Quote</a>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-art" role="img" aria-label="A spotless living room after cleaning"></div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <header class="section-head">
-        <h2>Services</h2>
-        <p>Home, Office, Hotel, Fumigation & Specialized cleaning.</p>
-      </header>
-      <!-- Services -->
+  <!-- Services -->
   <section class="section" id="services">
     <div class="container">
       <header class="section-head">
         <h2>Our Services</h2>
-        <p>Reliable, detail-oriented teams for homes, offices, hotels and estates.</p>
+        <p>Home • Office • Hotel • Fumigation & Pest Control • Specialized cleaning</p>
       </header>
 
       <div class="cards">
-        <article class="card reveal">
+        <article class="card service-card">
           <h3>Home Cleaning</h3>
-          <ul>
-            <li>Cleaning & trash removal</li>
-            <li>Dusting all surfaces</li>
-            <li>Restroom sanitation</li>
-            <li>Vacuuming & mopping</li>
-            <li>Move-in / move-out</li>
-          </ul>
+          <p>Bedrooms, kitchens, bathrooms, living areas, post-construction.</p>
         </article>
-
-        <article class="card reveal">
+        <article class="card service-card">
           <h3>Office Cleaning</h3>
-          <ul>
-            <li>Daily/weekly office care</li>
-            <li>Restroom sanitation</li>
-            <li>Windows & surfaces</li>
-            <li>Waste management</li>
-            <li>Post-construction clean</li>
-          </ul>
+          <p>Desks, restrooms, floors, windows. After-hours options available.</p>
         </article>
-
-        <article class="card reveal">
-          <h3>Hotel & Hospitality</h3>
-          <ul>
-            <li>Room & corridor care</li>
-            <li>Laundry/linen support</li>
-            <li>Lobbies, kitchens & bars</li>
-            <li>Glass & window cleaning</li>
-            <li>Deep cleaning programs</li>
-          </ul>
+        <article class="card service-card">
+          <h3>Hotel Cleaning</h3>
+          <p>Rooms, lobbies, hallways, back-of-house. Fast turnarounds.</p>
         </article>
-
-        <article class="card reveal">
-          <h3>Specialized & Outdoor</h3>
-          <ul>
-            <li>Interlock stone washing</li>
-            <li>Vessel/boat cleaning</li>
-            <li>Event & after-party clean</li>
-            <li>Fumigation & pest control</li>
-            <li>Disinfection services</li>
-          </ul>
+        <article class="card service-card">
+          <h3>Fumigation</h3>
+          <p>Safe, effective treatment. Pest control for homes & facilities.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- Pricing -->
   <section class="section alt" id="pricing">
     <div class="container">
       <header class="section-head">
-        <h2>Pricing</h2>
-        <p>Transparent options. Request a custom quote for large spaces.</p>
+        <h2>Transparent Pricing</h2>
+        <p>Tell us your space size and preferred date for a precise quote.</p>
       </header>
-     <!-- Pricing -->
-  <section class="section alt" id="pricing">
-    <div class="container">
-      <header class="section-head">
-        <h2>Simple Pricing</h2>
-        <p>Transparent starting rates. Final quote confirmed after a quick inspection.</p>
-      </header>
-      <div class="pricing">
-        <article class="price-card reveal">
-          <h3>Mini/Studio</h3>
-          <p class="price">From ₦15,000</p>
-          <ul>
-            <li>General cleaning</li>
-            <li>1 bathroom</li>
-            <li>Basic supplies</li>
-          </ul>
+      <div class="cards">
+        <article class="card price-card">
+          <h3>Home</h3>
+          <p class="price">From ₦</p>
+          <p>Deep, move-in/out, post-renovation.</p>
           <a href="#contact" class="btn btn-primary">Book this</a>
         </article>
-        <article class="price-card featured reveal">
-          <h3>2–3 Bedroom</h3>
-          <p class="price">From ₦25,000</p>
-          <ul>
-            <li>Deep cleaning</li>
-            <li>2–3 bathrooms</li>
-            <li>Windows & kitchen</li>
-          </ul>
+        <article class="card price-card">
+          <h3>Office</h3>
+          <p class="price">Custom</p>
+          <p>Daily/weekly schedules. After-hours available.</p>
           <a href="#contact" class="btn btn-primary">Book this</a>
         </article>
-        <article class="price-card reveal">
-          <h3>Office / Shop</h3>
-          <p class="price">From ₦35,000</p>
-          <ul>
-            <li>Custom schedule</li>
-            <li>Waste handling</li>
-            <li>After-hours option</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Request quote</a>
+        <article class="card price-card">
+          <h3>Hotel & Specialized</h3>
+          <p class="price">By quote</p>
+          <p>Large facilities or special requests.</p>
+          <a href="#contact" class="btn btn-outline">Request quote</a>
         </article>
       </div>
-      <p class="fine">* Prices vary by size, condition, scope and travel. Fumigation and specialized jobs are quoted separately.</p>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- About -->
   <section class="section alt" id="about">
     <div class="container">
       <header class="section-head">
         <h2>About Us</h2>
         <p>Registered with CAC. Trained, supervised staff. Satisfaction guaranteed.</p>
       </header>
-     <!-- About -->
-  <section class="section alt" id="about">
-    <div class="container about-grid">
-      <div>
-        <h2>About Delly's</h2>
-        <p>We’re a Port Harcourt-based cleaning company delivering spotless spaces for homes, offices, hotels and estates. Our trained team follows checklists, quality control and safety procedures to ensure consistent results.</p>
-        <ul class="ticks">
-          <li>Registered with the Corporate Affairs Commission (CAC)</li>
-          <li>Background-checked staff & supervision</li>
-          <li>Eco-friendly supplies on request</li>
-        </ul>
-        <div class="cta-row">
-         <a class="btn btn-outline" href="assets/cac-certificate.png" target="_blank" rel="noopener">
-  View CAC Certificate
-</a>
-          <a class="btn btn-primary" href="#contact">Request a Quote</a>
-        </div>
-      </div>
-      <figure class="about-photo" aria-label="Team cleaning a bright living room"></figure>
-    </div>
-  </section>
-      <p><a class="btn btn-outline" href="assets/cac-certificate.pdf" target="_blank" rel="noopener">View CAC Certificate</a></p>
+      <p>We bring supplies and pro-grade tools. Eco-friendly options on request.</p>
+      <p><a class="btn btn-outline" href="assets/cac-certificate.jpg" target="_blank" rel="noopener">View CAC Certificate</a></p>
     </div>
   </section>
 
-  <!-- GALLERY -->
+  <!-- Gallery -->
   <section class="section" id="gallery">
     <div class="container">
       <header class="section-head">
         <h2>Before & After</h2>
-        <p>Add your job photos here to build trust.</p>
+        <p>Recent jobs from homes, offices & hotels.</p>
       </header>
 
       <div class="gallery">
-        <!-- Hotel lobby -->
+        <!-- Replace image paths with yours (keep 1:1-ish photos for best look) -->
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/hotel-lobby-port-harcourt-2025-08-before.webp" data-caption="Hotel Lobby — Before">
-            <img src="assets/gallery/hotel-lobby-port-harcourt-2025-08-before.webp" alt="Before — hotel lobby with dull tiles and clutter" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/hotel-lobby-port-harcourt-2025-08-before.webp" alt="Hotel lobby — before" loading="lazy" decoding="async">
           <figcaption>Hotel Lobby — Before</figcaption>
         </figure>
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/hotel-lobby-port-harcourt-2025-08-after.webp" data-caption="Hotel Lobby — After">
-            <img src="assets/gallery/hotel-lobby-port-harcourt-2025-08-after.webp" alt="After — hotel lobby polished tiles and tidy seating" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/hotel-lobby-port-harcourt-2025-08-after.webp" alt="Hotel lobby — after" loading="lazy" decoding="async">
           <figcaption>Hotel Lobby — After</figcaption>
         </figure>
 
-        <!-- Office desk -->
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/office-desk-port-harcourt-2025-08-before.webp" data-caption="Office — Before">
-            <img src="assets/gallery/office-desk-port-harcourt-2025-08-before.webp" alt="Before — office desk with scattered papers and dust" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/office-desk-port-harcourt-2025-08-before.webp" alt="Office desk — before" loading="lazy" decoding="async">
           <figcaption>Office — Before</figcaption>
         </figure>
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/office-desk-port-harcourt-2025-08-after.webp" data-caption="Office — After">
-            <img src="assets/gallery/office-desk-port-harcourt-2025-08-after.webp" alt="After — office desk organized and spotless" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/office-desk-port-harcourt-2025-08-after.webp" alt="Office desk — after" loading="lazy" decoding="async">
           <figcaption>Office — After</figcaption>
         </figure>
 
-        <!-- Home living room -->
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/home-living-room-port-harcourt-2025-08-before.webp" data-caption="Home — Before">
-            <img src="assets/gallery/home-living-room-port-harcourt-2025-08-before.webp" alt="Before — living room with clutter and dusty floor" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/home-living-room-port-harcourt-2025-08-before.webp" alt="Home living room — before" loading="lazy" decoding="async">
           <figcaption>Home — Before</figcaption>
         </figure>
         <figure class="g-item">
-          <a class="glink" href="assets/gallery/home-living-room-port-harcourt-2025-08-after.webp" data-caption="Home — After">
-            <img src="assets/gallery/home-living-room-port-harcourt-2025-08-after.webp" alt="After — living room tidy with polished tiles and arranged cushions" loading="lazy" decoding="async" width="1200" height="900">
-          </a>
+          <img src="assets/gallery/home-living-room-port-harcourt-2025-08-after.webp" alt="Home living room — after" loading="lazy" decoding="async">
           <figcaption>Home — After</figcaption>
         </figure>
       </div>
-
-      <p class="fine">Replace the placeholders with your own images in <code>/assets/gallery/</code>.</p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section alt" id="testimonials">
-    <div class="container">
-      <header class="section-head">
-        <h2>Clients love our work</h2>
-        <p>Real reviews from homes, offices & hotels around Port Harcourt.</p>
-      </header>
-
-      <div class="t-grid">
-        <figure class="t-card reveal">
-          <div class="stars" aria-label="5 out of 5">★★★★★</div>
-          <blockquote>“Professional team. My 3-bedroom apartment looked brand new after deep cleaning.”</blockquote>
-          <figcaption>— Ada O., GRA • Home cleaning</figcaption>
-        </figure>
-        <figure class="t-card reveal">
-          <div class="stars" aria-label="5 out of 5">★★★★★</div>
-          <blockquote>“They handled our office with care and worked after hours—zero disruption.”</blockquote>
-          <figcaption>— Mr. K., Trans-Amadi • Office cleaning</figcaption>
-        </figure>
-        <figure class="t-card reveal">
-          <div class="stars" aria-label="5 out of 5">★★★★★</div>
-          <blockquote>“Quick response and spotless hotel rooms. We’ll keep using Delly’s.”</blockquote>
-          <figcaption>— Hotel Manager • D/Line</figcaption>
-        </figure>
-      </div>
+      <p class="fine">Add/replace images in <code>/assets/gallery/</code>.</p>
     </div>
   </section>
 
@@ -358,21 +205,21 @@
     <div class="container">
       <header class="section-head"><h2>Frequently Asked Questions</h2></header>
       <details class="faq"><summary>Do you bring cleaning supplies and equipment?</summary>
-        <p>Yes. We arrive with professional tools and supplies. Eco options on request.</p>
+        <p>Yes. We arrive with professional tools and supplies. Eco options available.</p>
       </details>
       <details class="faq"><summary>Which areas do you cover?</summary>
         <p>Port Harcourt and wider Rivers State. Nationwide for large contracts.</p>
       </details>
       <details class="faq"><summary>Can I book recurring service?</summary>
-        <p>Weekly, bi-weekly and monthly with discounted rates.</p>
+        <p>Weekly, bi-weekly and monthly schedules with discounted rates.</p>
       </details>
       <details class="faq"><summary>Are staff vetted?</summary>
-        <p>Trained, background-checked, supervised. Checklist sign-off per job.</p>
+        <p>Trained, background-checked and supervised. Checklist sign-off per job.</p>
       </details>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section class="section" id="contact">
     <div class="container contact-grid">
       <div>
@@ -430,68 +277,68 @@
           <li>📞 <a href="tel:+2349045762007">0904 576 2007</a> / <a href="tel:+2349033006149">0903 300 6149</a></li>
           <li>✉️ <a href="mailto:delphinedee96@gmail.com">delphinedee96@gmail.com</a></li>
           <li>📍 Abuloma, Rivers State</li>
-          <li>📷 <a href="https://www.instagram.com/wisdomdominic" target="_blank" rel="noopener">@delphine.dominic37</a></li>
+          <li>📷 <a href="https://www.instagram.com/wisdomdominic" target="_blank" rel="noopener">@wisdomdominic</a></li>
           <li>📘 <a href="#" aria-label="Facebook page">Delly's Collectionz</a></li>
         </ul>
         <div class="map-hint">View on Map → <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=Abuloma,+Rivers+State">Abuloma, Rivers State</a></div>
       </aside>
     </div>
-  </section> <!-- ✅ END of #contact -->
+  </section>
 
-  <!-- CTA BANNER -->
+  <!-- CTA banner -->
   <section class="cta-wa">
     <div class="container cta-wa-grid">
       <h3>Ready for a spotless space?</h3>
       <p>Get a free quote in minutes on WhatsApp.</p>
-      <a class="btn btn-cta"
-         href="https://wa.me/2349045762007?text=Hello%20Delly's%20Cleaning%2C%20I'd%20like%20to%20book%20a%20cleaning."
-         target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-cta" href="https://wa.me/2349045762007?text=Hello%20Delly's%20Cleaning%2C%20I'd%20like%20to%20book%20a%20cleaning." target="_blank" rel="noopener">Book on WhatsApp</a>
     </div>
   </section>
-<!-- Fooeter -->
- <footer class="site-footer" id="footer">
-  <div class="container foot-grid two">
-    <div class="foot-left">
-      <a class="brand" href="#home" aria-label="Delly's Cleaning Services">
-        <span class="brand-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 64 64" fill="none">
-            <path d="M46 27l-9-22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M24 26l22-9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <rect x="14" y="28" width="28" height="26" rx="6" stroke="currentColor" stroke-width="4" fill="none"/>
-            <path d="M14 44h28" stroke="currentColor" stroke-width="4"/>
-          </svg>
-        </span>
-        <span class="brand-text">Delly's <em>Cleaning</em></span>
-      </a>
-      <p class="foot-tag">Home • Office • Hotel • Specialized Cleaning</p>
-      <ul class="foot-contact">
-        <li>📞 <a href="tel:+2349045762007">0904 576 2007</a> • <a href="tel:+2349033006149">0903 300 6149</a></li>
-        <li>✉️ <a href="mailto:delphinedee96@gmail.com">delphinedee96@gmail.com</a></li>
-        <li>📍 Abuloma, Port Harcourt — Rivers State</li>
-      </ul>
-    </div>
 
-    <div class="foot-right">
-      <h4>Explore</h4>
-      <ul class="foot-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#faq">FAQs</a></li>
-        <li><a href="assets/terms.txt">Terms</a></li>
-      </ul>
-      <p class="muted small">© <span id="year"></span> Delly's Collectionz &amp; Cleaning Services.</p>
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container foot-grid two">
+      <div class="foot-left">
+        <a class="brand" href="#home" aria-label="Delly's Cleaning">
+          <span class="brand-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 64 64" fill="none">
+              <path d="M46 27l-9-22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <path d="M24 26l22-9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <rect x="14" y="28" width="28" height="26" rx="6" stroke="currentColor" stroke-width="4" fill="none"/>
+              <path d="M14 44h28" stroke="currentColor" stroke-width="4"/>
+            </svg>
+          </span>
+          <span class="brand-text">Delly’s <em>Cleaning</em></span>
+        </a>
+        <p class="foot-tag">Home • Office • Hotel • Specialized Cleaning</p>
+        <ul class="foot-contact">
+          <li>📞 <a href="tel:+2349045762007">0904 576 2007</a> • <a href="tel:+2349033006149">0903 300 6149</a></li>
+          <li>✉️ <a href="mailto:delphinedee96@gmail.com">delphinedee96@gmail.com</a></li>
+          <li>📍 Abuloma, Port Harcourt — Rivers State</li>
+        </ul>
+      </div>
+
+      <div class="foot-right">
+        <h4>Explore</h4>
+        <ul class="foot-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="assets/terms.txt">Terms</a></li>
+        </ul>
+        <p class="muted small">© <span id="year"></span> Delly's Collectionz &amp; Cleaning Services.</p>
+      </div>
     </div>
-  </div>
-  <div class="foot-bottom">
-    <div class="container"><small>Registered with CAC • Rivers State, Nigeria</small></div>
-  </div>
-</footer>
-  <!-- Floating WhatsApp -->
+    <div class="foot-bottom">
+      <div class="container"><small>Registered with CAC • Rivers State, Nigeria</small></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (desktop) -->
   <a class="fab" href="https://wa.me/2349045762007?text=Hello%20Delly's%20Cleaning" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">💬</a>
 
-  <!-- Schema -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -506,22 +353,13 @@
   }
   </script>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=1.0"></script>
 
   <!-- Sticky WhatsApp bar (mobile only) -->
   <div class="wa-sticky" id="waSticky">
     <a href="https://wa.me/2349045762007?text=Hello%20Delly's%20Cleaning%2C%20I'd%20like%20to%20book%20a%20cleaning."
        target="_blank" rel="noopener">Book on WhatsApp</a>
   </div>
-</body>
-    </div>
-  </section>
-    </div>
-  </section>
+
 </body>
 </html>
-
-
-
-
-
