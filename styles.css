@@ -123,4 +123,19 @@ details.faq[open]{border-color:#cfe1ff; background:#f7fbff}
 #gallery .g-item:hover img{transform:scale(1.04)}
 #gallery .g-item figcaption{position:absolute;left:10px;bottom:10px;padding:.28rem .6rem;background:rgba(0,0,0,.55);color:#fff;border-radius:10px;font-weight:700;font-size:.86rem}
 section[id]{scroll-margin-top:90px}
+/* ===== Lightbox ===== */
+.lb-backdrop{position:fixed;inset:0;padding:24px;display:none;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.85);z-index:10050}
+.lb-backdrop.open{display:flex}
+.lb-frame{max-width:min(92vw,1100px);max-height:82vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lb-cap{color:#fff;text-align:center;margin-top:10px;font-weight:700}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);color:#fff;display:flex;
+  align-items:center;justify-content:center;backdrop-filter:blur(4px);cursor:pointer}
+.lb-prev{left:18px}
+.lb-next{right:18px}
+.lb-close{top:18px;right:18px;transform:none}
+body.noscroll{overflow:hidden}
+#gallery .g-item{cursor:zoom-in}
+
 
