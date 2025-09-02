@@ -137,5 +137,24 @@ section[id]{scroll-margin-top:90px}
 .lb-close{top:18px;right:18px;transform:none}
 body.noscroll{overflow:hidden}
 #gallery .g-item{cursor:zoom-in}
+/* Make Book Now calm by default; only glow on hover/focus */
+.menu .btn.btn-primary{
+  box-shadow: none;                 /* no glow by default */
+  transform: none;
+}
+
+.menu .btn.btn-primary:hover,
+.menu .btn.btn-primary:focus-visible{
+  box-shadow: 0 10px 20px rgba(19,67,195,.18);
+  transform: translateY(-1px);
+}
+
+/* Remove sticky focus look after click (but keep for keyboard) */
+.menu .btn.btn-primary:focus{ outline: none; }
+.menu .btn.btn-primary:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(19,67,195,.16);
+}
+
 
 
