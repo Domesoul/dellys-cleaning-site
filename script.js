@@ -39,3 +39,56 @@ if (form) {
 // Footer year
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
+// ===== Lightbox for #gallery =====
+(() => {
+  const figs = Array.from(document.querySelectorAll('#gallery .g-item'));
+  if (!figs.length) return;
+
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lbImg');
+  const cap = document.getElementById('lbCap');
+  const btnPrev = lb.querySelector('.lb-prev');
+  const btnNext = lb.querySelector('.lb-next');
+  const btnClose = lb.querySelector('.lb-close');
+
+  const items = figs.map(f => {
+    const i = f.querySelector('img');
+    const c = f.querySelector('figcaption');
+    return { src: i?.getAttribute('src') || '', alt: i?.getAttribute('alt') || '', cap: c?.textContent?.trim() || '' };
+  });
+
+  let idx = 0;
+
+  function show(n){
+    idx = (n + items.length) % items.length;
+    const it = items[idx];
+    img.src = it.src;
+    img.alt = it.alt || it.cap || 'Gallery image';
+    cap.textContent = it.cap || '';
+  }
+  function open(n){
+    show(n);
+    lb.classList.add('open');
+    document.body.classList.add('noscroll');
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.classList.remove('noscroll');
+    // allow the fade-out to finish then drop the src for memory
+    setTimeout(()=>{ img.removeAttribute('src'); }, 150);
+  }
+
+  figs.forEach((f, i) => f.addEventListener('click', () => open(i)));
+  btnPrev.addEventListener('click', e => { e.stopPropagation(); show(idx-1); });
+  btnNext.addEventListener('click', e => { e.stopPropagation(); show(idx+1); });
+  btnClose.addEventListener('click', e => { e.stopPropagation(); close(); });
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx-1);
+    if (e.key === 'ArrowRight') show(idx+1);
+  });
+})();
+
