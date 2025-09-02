@@ -233,7 +233,8 @@
           </div>
           <div class="form-row">
             <label for="phone">Phone / WhatsApp</label>
-            <input id="phone" name="phone" type="tel" required />
+            <input id="phone" name="phone" type="tel" inputmode="tel"
+       pattern="^[0-9+()\\s-]{7,}$" required />
           </div>
           <div class="form-row">
             <label for="email">Email</label>
@@ -395,5 +396,6 @@
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 </body>
 </html>
+
 
 
