@@ -155,6 +155,12 @@ body.noscroll{overflow:hidden}
   transform: translateY(0);
   box-shadow: 0 6px 12px rgba(19,67,195,.16);
 }
+/* Active nav state on scroll */
+.menu a.active{
+  background:#eef6ff;
+  color:var(--primary);
+}
+
 
 
 
