@@ -160,6 +160,16 @@ body.noscroll{overflow:hidden}
   background:#eef6ff;
   color:var(--primary);
 }
+/* Back to top */
+.to-top{
+  position:fixed; right:18px; bottom:90px; z-index:55;
+  width:44px;height:44px; display:none; align-items:center; justify-content:center;
+  border-radius:999px; border:1px solid #e7ecf2; background:#fff; color:#0b1020;
+  box-shadow:var(--shadow); cursor:pointer; font-weight:800;
+}
+.to-top.show{ display:flex; }
+.to-top:hover{ background:#f1f5ff; color:var(--primary); }
+
 
 
 
