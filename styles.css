@@ -175,9 +175,28 @@ body.noscroll{overflow:hidden}
 }
 /* Keep your Book Now tweak */
 .menu .btn.btn-primary:focus{ outline:none; }
-
-
-
-
-
+/* ===== Success Toast ===== */
+.toast{
+  position:fixed; right:18px; bottom:18px; z-index:80;
+  display:flex; align-items:center; gap:.75rem;
+  background:#fff; color:#0b1020; border:1px solid #e7ecf2; border-left:6px solid #10b981;
+  padding:.85rem 1rem; border-radius:14px; box-shadow:var(--shadow);
+  transform:translateY(16px); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease;
+  max-width:min(92vw, 560px);
+}
+.toast.show{ opacity:1; transform:translateY(0); pointer-events:auto }
+.toast-icon{
+  width:34px;height:34px; display:grid; place-items:center;
+  border-radius:999px; background:linear-gradient(135deg,#22c55e,#10b981); color:#fff; font-weight:800;
+}
+.toast-title{ font-weight:800; margin-bottom:2px }
+.toast-text{ color:#475569; line-height:1.35 }
+.toast-link{ font-weight:700; color:#1343C3; text-decoration:underline }
+.toast-close{
+  margin-left:.25rem; background:#fff; border:1px solid #e7ecf2; border-radius:10px; width:32px; height:32px; cursor:pointer;
+}
+.toast-close:hover{ background:#f8fafc }
+@media (max-width:820px){
+  .toast{ left:12px; right:12px; bottom:96px; } /* sit above the sticky WhatsApp bar */
+}
 
