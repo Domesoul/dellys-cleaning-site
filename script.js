@@ -94,5 +94,24 @@ if (y) y.textContent = new Date().getFullYear();
 document.addEventListener('mousedown', (e) => {
   if (e.target.matches('.menu .btn')) e.target.blur();
 });
+// Highlight active nav link while scrolling
+(() => {
+  const sections = document.querySelectorAll('section[id]');
+  const links = [...document.querySelectorAll('.menu a[href^="#"]')];
+  if (!sections.length || !links.length) return;
+
+  const linkById = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.id;
+      links.forEach(a => a.classList.toggle('active', a === linkById.get(id)));
+    });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+
+  sections.forEach(s => io.observe(s));
+})();
+
 
 
