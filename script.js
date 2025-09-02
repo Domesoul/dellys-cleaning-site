@@ -182,4 +182,27 @@ document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
 
   closeBtn?.addEventListener('click', hideToast);
 })();
+// GA4 event helpers (only if gtag exists)
+function logEvent(name, params){ if (typeof gtag === 'function') gtag('event', name, params || {}); }
+
+// WhatsApp buttons/links
+document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(a=>{
+  a.addEventListener('click', () => logEvent('click_whatsapp', {link_text: a.textContent.trim()}));
+});
+
+// Phone links
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+  a.addEventListener('click', () => logEvent('click_call', {phone: a.getAttribute('href').replace('tel:','')}));
+});
+
+// Email links
+document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
+  a.addEventListener('click', () => logEvent('click_email', {email: a.getAttribute('href').replace('mailto:','')}));
+});
+
+// Hero / CTA buttons
+document.querySelectorAll('.btn-cta, .btn.btn-primary, .btn.btn-outline').forEach(btn=>{
+  btn.addEventListener('click', () => logEvent('click_button', {text: btn.textContent.trim()}));
+});
+
 
