@@ -169,6 +169,13 @@ body.noscroll{overflow:hidden}
 }
 .to-top.show{ display:flex; }
 .to-top:hover{ background:#f1f5ff; color:var(--primary); }
+/* Nice focus ring for keyboard users */
+:where(a,button,.btn,input,select,textarea,summary):focus-visible{
+  outline:3px solid #3B82F6; outline-offset:2px; border-radius:10px;
+}
+/* Keep your Book Now tweak */
+.menu .btn.btn-primary:focus{ outline:none; }
+
 
 
 
