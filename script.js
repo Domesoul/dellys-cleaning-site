@@ -112,6 +112,14 @@ document.addEventListener('mousedown', (e) => {
 
   sections.forEach(s => io.observe(s));
 })();
+// Back to top reveal + smooth scroll
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  if (!toTop) return;
+  toTop.classList.toggle('show', window.scrollY > 600);
+});
+toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 
 
 
