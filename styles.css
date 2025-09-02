@@ -116,3 +116,11 @@ details.faq[open]{border-color:#cfe1ff; background:#f7fbff}
 
 /* Safety: keep sections from overlaying one another */
 .section, footer, .cta-wa{position:relative; isolation:isolate}
+/* Tidy gallery grid + sticky-header offset */
+#gallery .gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));max-width:900px;margin:18px auto 0}
+#gallery .g-item{position:relative;aspect-ratio:1/1;border:1px solid #e7ecf2;border-radius:14px;overflow:hidden;background:#fff}
+#gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+#gallery .g-item:hover img{transform:scale(1.04)}
+#gallery .g-item figcaption{position:absolute;left:10px;bottom:10px;padding:.28rem .6rem;background:rgba(0,0,0,.55);color:#fff;border-radius:10px;font-weight:700;font-size:.86rem}
+section[id]{scroll-margin-top:90px}
+
