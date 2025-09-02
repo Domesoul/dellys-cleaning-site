@@ -134,6 +134,26 @@ document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
     if (m?.classList.contains('open')) t?.click();
   });
 });
+// Swipe gestures for lightbox (mobile)
+(() => {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  let x0=null, y0=null;
+  lb.addEventListener('touchstart', e => {
+    const t = e.changedTouches[0]; x0=t.clientX; y0=t.clientY;
+  }, {passive:true});
+  lb.addEventListener('touchend', e => {
+    if (x0===null) return;
+    const t = e.changedTouches[0], dx=t.clientX - x0, dy=t.clientY - y0;
+    if (Math.abs(dx) > 40 && Math.abs(dy) < 40) {
+      // left = next, right = prev
+      const evt = new Event(dx < 0 ? 'click' : 'click');
+      lb.querySelector(dx < 0 ? '.lb-next' : '.lb-prev').dispatchEvent(evt);
+    }
+    x0 = y0 = null;
+  }, {passive:true});
+})();
+
 
 
 
