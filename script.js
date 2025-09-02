@@ -126,6 +126,15 @@ toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoo
   const t = new Date(), pad = n => String(n).padStart(2,'0');
   d.min = `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;
 })();
+// Close mobile menu when a nav link is clicked
+document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => {
+    const m = document.getElementById('siteMenu');
+    const t = document.getElementById('navToggle');
+    if (m?.classList.contains('open')) t?.click();
+  });
+});
+
 
 
 
