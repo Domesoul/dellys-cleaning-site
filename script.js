@@ -119,6 +119,14 @@ window.addEventListener('scroll', () => {
   toTop.classList.toggle('show', window.scrollY > 600);
 });
 toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+// Set min date = today
+(() => {
+  const d = document.getElementById('date');
+  if (!d) return;
+  const t = new Date(), pad = n => String(n).padStart(2,'0');
+  d.min = `${t.getFullYear()}-${pad(t.getMonth()+1)}-${pad(t.getDate())}`;
+})();
+
 
 
 
