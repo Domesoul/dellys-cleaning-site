@@ -235,5 +235,14 @@ body.noscroll{overflow:hidden}
   background: rgba(0,0,0,.55); color: #fff; font-weight: 800;
   font-size: .9rem; letter-spacing: .2px;
 }
+/* Smaller gallery captions */
+#gallery .g-item figcaption{
+  font-size: clamp(.65rem, 1.6vw, .8rem) !important; /* ~10–13px */
+  line-height: 1.15;
+  padding: .22rem .5rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
 
 
