@@ -91,4 +91,8 @@ if (y) y.textContent = new Date().getFullYear();
     if (e.key === 'ArrowRight') show(idx+1);
   });
 })();
+document.addEventListener('mousedown', (e) => {
+  if (e.target.matches('.menu .btn')) e.target.blur();
+});
+
 
