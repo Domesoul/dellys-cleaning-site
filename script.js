@@ -154,9 +154,32 @@ document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
   }, {passive:true});
 })();
 
+// ===== Toast helpers =====
+(function(){
+  const toast = document.getElementById('toast');
+  const link  = document.getElementById('toastLink');
+  const closeBtn = document.querySelector('.toast-close');
+  let timer;
 
+  function hideToast(){
+    if (!toast) return;
+    toast.classList.remove('show');
+    toast.setAttribute('aria-hidden', 'true');
+  }
 
+  window.showToast = function(url){
+    if (!toast) return;
+    if (link) {
+      link.href = url;            // safe because it's programmatic, not innerHTML
+      link.style.display = 'inline';
+    }
+    toast.setAttribute('aria-hidden', 'false');
+    toast.classList.add('show');
 
+    clearTimeout(timer);
+    timer = setTimeout(hideToast, 6000);
+  };
 
-
+  closeBtn?.addEventListener('click', hideToast);
+})();
 
